@@ -39,8 +39,12 @@ const App = () => {
           path="/dashboard"
           element={user ? <Dashboard /> : <Navigate to="/login" />}
         />
+        <Route
+          path="/profile"
+          element={user ? <Profile /> : <Navigate to="/login" />}
+        />
         <Route 
-        path="/cart" 
+          path="/cart" 
           element={<Cart />} 
         />
       </Routes>

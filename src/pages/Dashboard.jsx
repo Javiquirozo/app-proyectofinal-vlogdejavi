@@ -3,9 +3,11 @@ import { UserContext } from "../context/UserContext";
 import { TextField, Button, Container, Grid, Typography } from "@mui/material";
 import { CursosContext } from "../context/CursosContext";
 
+// En el dashboard el usuario registrado puede agregar cursos de cocina
+
 const Dashboard = () => {
   const { user } = useContext(UserContext);
-  const {createCurso, cursos, deleteCurso} =useContext(CursosContext);
+  const {createCurso, cursos, deleteCurso} = useContext(CursosContext);
 
   const [nameOfClass, setNameOfClass] = useState("");
   const [description, setDescription] = useState("");

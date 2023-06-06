@@ -8,7 +8,8 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#6BB29C',
+        color: 'white',
         py: 3,
         mt: 'auto',
       }}
@@ -21,3 +22,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

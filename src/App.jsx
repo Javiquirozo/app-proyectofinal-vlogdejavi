@@ -2,12 +2,15 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
 
+import CursosDeCocina from "./components/CursosDeCocina";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+// import Update from "./pages/Update";
+import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import Cart from "./pages/Cart";
-import CursosDeCocina from "./pages/CursosDeCocina";
+import Favorites from "./pages/Favorites";
 
 const App = () => {
   const { user } = useContext(UserContext);
@@ -43,8 +46,12 @@ const App = () => {
           path="/profile"
           element={user ? <Profile /> : <Navigate to="/login" />}
         />
+        <Route
+          path="/favorites"
+          element={user ? <Favorites /> : <Navigate to="/login" />}
+        />
         <Route 
-          path="/cart" 
+          path="/carrito" 
           element={<Cart />} 
         />
       </Routes>

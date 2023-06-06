@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client';
 
 import UserProvider from './context/UserContext';
 import CursosProvider from './context/CursosContext';
+import FavoritesProvider from './context/FavoritesContext';
 
 import App from './App';
 import Navbar from './components/Navbar';
@@ -20,12 +21,14 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <UserProvider>
         <CursosProvider>
-          <CssBaseline />
-          <Navbar />
-          <Container maxWidth="lg">
-            <App />
-          </Container>
-          <Footer />
+          <FavoritesProvider>
+            <CssBaseline />
+            <Navbar />
+              <Container maxWidth="lg">
+                <App />
+              </Container>
+            <Footer />
+          </FavoritesProvider>
         </CursosProvider>
       </UserProvider> 
     </BrowserRouter>

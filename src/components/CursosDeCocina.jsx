@@ -2,12 +2,9 @@ import { useContext } from "react";
 import { Grid, Card, CardContent, CardMedia, Typography, Button } from "@mui/material";
 import { CursosContext } from "../context/CursosContext";
 
-const CursosDeCocina = () => {
+// Este componente es la lista de cursos de cocina en formato cards que debe verse en el Home de forma pública para cualquiera que entre a la app.
+const CursosDeCocina = ({curso}) => {
   const { cursosdecocina, addToCart } = useContext(CursosContext);
-
-  if (!cursosdecocina) {
-    return null; // Otra opción es mostrar un mensaje de carga o un indicador de carga
-  }
 
   return (
     <Grid container spacing={3}>

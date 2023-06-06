@@ -1,6 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
-import { UserContext } from "./UserContext";
-
+import { createContext, useEffect, useState } from "react";
 
 export const CursosContext = createContext();
 
@@ -23,26 +21,39 @@ const CursosProvider = ({ children }) => {
       }, [])
 
     useEffect(() => {
-      localStorage.setItem('cursos', JSON.stringify(cursos))
+      localStorage.setItem('cursos', JSON.stringify(cursos));
     }, [cursos])
 
-    const createCurso = (newCurso) => {
+    const createCurso = (curso) => {
       // chatgpt: setCursos ( [...cursos, newCurso]);
-      setCursos([newCurso, ...cursos])
+      setCursos([curso, ...cursos])
     };
 
     const deleteCurso = (id) => {
-      const newCursos = cursos.filter(curso => curso.id !== id)
-      setCursos(newCursos)
-    }
+      const newCursos = cursos.filter((curso) => curso.id !== id);
+      setCursos(newCursos);
+    };
 
+    const updateCurso = (newCurso) => {
+      const newCursos = cursos.map((curso) => {
+        if (curso.id === newCurso.id) {
+          return newCurso;
+        }
+        return curso;
+      });
+
+      setCursos(newCursos);
+    };
 
   return (
     <CursosContext.Provider 
     value={{
         cursos,
         createCurso,
-        }}>
+        deleteCurso,
+        updateCurso
+        }}
+        >
       {children}
     </CursosContext.Provider>
   );

@@ -19,92 +19,100 @@ export default function Navbar() {
   };
 
   return (
-      <>
-        <div>total del carrito</div>
-        <Link to="/carrito">
-          <h4>Total: {total}</h4>
-        </Link>
-    
-        <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static">
-            <Toolbar>
+    <>
+      <div>total del carrito</div>
+      <Link to="/carrito">
+        <h4>Total: {total}</h4>
+      </Link>
+
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static" sx={{ backgroundColor: '#6BB29C' }}>
+          <Toolbar>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{
+                display: { xs: 'none', sm: 'block' },
+                color: 'white',
+                textDecoration: 'none'
+              }}
+            >
+              <NavLink to="/" style={{ color: 'white', textDecoration: 'none' }}>
+                VlogDeJavi
+              </NavLink>
+            </Typography>
+            <Box sx={{ flexGrow: 1 }} />
+            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <IconButton
                 size="large"
-                edge="start"
+                aria-label="cart"
                 color="inherit"
-                aria-label="open drawer"
-                sx={{ mr: 2 }}
+                component={NavLink}
+                to="/carrito"
               >
-                <MenuIcon />
+                <ShoppingCartIcon />
               </IconButton>
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ display: { xs: 'none', sm: 'block' } }}
-              >
-                <NavLink to="/" style={{ color: 'white', textDecoration: 'none' }}>
-                  VlogDeJavi
-                </NavLink>
-              </Typography>
-              <Box sx={{ flexGrow: 1 }} />
-              <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <IconButton
-                  size="large"
-                  aria-label="cart"
-                  color="inherit"
-                  component={NavLink}
-                  to="/carrito"
-                >
-                  <ShoppingCartIcon />
-                </IconButton>
-                {user ? (
-                  <>
-                    <IconButton
-                      size="large"
-                      aria-label="profile"
-                      color="inherit"
-                      component={NavLink}
-                      to="/profile"
+              {user ? (
+                <>
+                  <IconButton
+                    size="large"
+                    aria-label="profile"
+                    color="inherit"
+                    component={NavLink}
+                    to="/profile"
+                  >
+                    <AccountCircleIcon />
+                  </IconButton>
+                  <Typography variant="h6" noWrap component="div">
+                    <button
+                      onClick={handleLogout}
+                      style={{
+                        color: 'white',
+                        border: 'none',
+                        background: 'none',
+                        cursor: 'pointer'
+                      }}
                     >
-                      <AccountCircleIcon />
-                    </IconButton>
-                    <Typography variant="h6" noWrap component="div">
-                      <button
-                        onClick={handleLogout}
-                        style={{ color: 'white', border: 'none', background: 'none', cursor: 'pointer' }}
-                      >
-                        Logout
-                      </button>
-                    </Typography>
-                  </>
-                ) : (
-                  <>
-                    <IconButton
-                      size="large"
-                      aria-label="login"
-                      color="inherit"
-                      component={NavLink}
+                      Logout
+                    </button>
+                  </Typography>
+                </>
+              ) : (
+                <>
+                  <IconButton
+                    size="large"
+                    aria-label="login"
+                    color="inherit"
+                    component={NavLink}
+                    to="/login"
+                  >
+                    <AccountCircleIcon />
+                  </IconButton>
+                  <Typography variant="h6" noWrap component="div">
+                    <NavLink
                       to="/login"
+                      style={{ color: 'white', textDecoration: 'none' }}
+                      activeclassname="active"
                     >
-                      <AccountCircleIcon />
-                    </IconButton>
-                    <Typography variant="h6" noWrap component="div">
-                      <NavLink
-                        to="/login"
-                        style={{ color: 'white', textDecoration: 'none' }}
-                        activeclassname="active"
-                      >
-                        Login
-                      </NavLink>
-                    </Typography>
-                  </>
-                )}
-              </Box>
-            </Toolbar>
-          </AppBar>
-        </Box>
-      </>
-    );
-    
+                      Login
+                    </NavLink>
+                  </Typography>
+                </>
+              )}
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </Box>
+    </>
+  );
 }

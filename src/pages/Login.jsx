@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { UserContext } from '../context/UserContext';
-import { useNavigate } from 'react-router-dom';
-import { TextField, Button, Modal, Box } from '@mui/material';
+import { useNavigate, Link } from 'react-router-dom';
+import { TextField, Button, Modal, Box, Typography } from '@mui/material';
 
 const Login = () => {
   const { login } = useContext(UserContext);
@@ -23,7 +23,6 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Buscar el usuario por email en el array de usuarios
     const user = users.find((user) => user.email === email);
 
     if (user && user.password === password) {
@@ -32,8 +31,7 @@ const Login = () => {
         await login(user.email, user.password);
         navigate('/dashboard');
       } catch (error) {
-        console.error(error);
-      }
+      } 
     } else {
       // La contraseña no coincide o el usuario no existe
       console.log('Usuario o contraseña incorrectos');
@@ -52,11 +50,44 @@ const Login = () => {
 
   return (
     <div>
-      <h1>¡Bienvenid@! Inicia sesión</h1>
-      <h2>En este blog encontrarás muchas recetas y material exclusivo para lograr llevar una alimentación más saludable.</h2>
-      <Button variant="contained" onClick={handleOpen}>
-        Iniciar sesión
-      </Button>
+      <Typography variant="h4" align="center" sx={{ mb: 2 }}>
+        ¡Bienvenid@! Inicia sesión
+      </Typography>
+      <Typography variant="body1" align="center" sx={{ mb: 2 }}>
+        En este blog encontrarás muchas recetas y material exclusivo para lograr llevar una alimentación más saludable.
+      </Typography>
+      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Button
+          variant="contained"
+          onClick={handleOpen}
+          sx={{
+            backgroundColor: '#9A659B',
+            color: 'white',
+            mr: 2,
+            '&:hover': {
+              backgroundColor: '#BCCC5E',
+              color: 'white',
+            },
+          }}
+        >
+          Iniciar sesión
+        </Button>
+        <Button
+          variant="contained"
+          component={Link}
+          to="/register"
+          sx={{
+            backgroundColor: '#9A659B',
+            color: 'white',
+            '&:hover': {
+              backgroundColor: '#BCCC5E',
+              color: 'white',
+            },
+          }}
+        >
+          Registrarse
+        </Button>
+      </Box>
       <Modal open={open} onClose={handleClose}>
         <Box
           sx={{
@@ -64,7 +95,8 @@ const Login = () => {
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            bgcolor: 'background.paper',
+            bgcolor: '#9A659B',
+            color: 'white',
             boxShadow: 24,
             p: 4,
           }}
@@ -76,6 +108,7 @@ const Login = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              sx={{ mb: 2 }}
             />
             <br />
             <TextField
@@ -84,9 +117,21 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              sx={{ mb: 2 }}
             />
             <br />
-            <Button variant="contained" type="submit">
+            <Button
+              variant="contained"
+              type="submit"
+              sx={{
+                backgroundColor: '#9A659B',
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: '#BCCC5E',
+                  color: 'white',
+                },
+              }}
+            >
               Iniciar sesión
             </Button>
           </form>
@@ -97,6 +142,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-

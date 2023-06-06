@@ -1,8 +1,12 @@
-import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
-import { Button, TextField, Typography, Box, Container } from "@mui/material";
+import { useContext, useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Button, TextField, Typography, Box, Container, Modal } from "@mui/material";
+import { UserContext } from "../context/UserContext";
 
 const Register = () => {
+  const { register, login } = useContext(UserContext);
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -10,8 +14,17 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
-  const handleRegister = (e) => {
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -19,15 +32,25 @@ const Register = () => {
       return;
     }
 
-register ({
-  name,
-  email,
-  phone,
-  password,
-  id: Date.now ()
-});
+    const user = register({
+      name,
+      email,
+      phone,
+      password,
+      id: Date.now(),
+    });
 
-    // Registration success
+    if (user) {
+      try {
+        await login(user.email, user.password);
+        navigate("/dashboard");
+      } catch (error) {
+        // Manejar el error de inicio de sesión aquí
+      }
+    } else {
+      // La contraseña no coincide o el usuario no existe
+    }
+
     setSuccess(true);
   };
 
@@ -39,7 +62,7 @@ register ({
     <Container maxWidth="sm">
       <Box sx={{ mt: 4 }}>
         <Typography variant="h4" align="center" gutterBottom>
-          Register
+          Registro de usuario
         </Typography>
         {error && (
           <Typography variant="body1" color="error" align="center">
@@ -48,7 +71,7 @@ register ({
         )}
         <Box component="form" onSubmit={handleRegister}>
           <TextField
-            label="Name"
+            label="Nombre completo"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -66,7 +89,7 @@ register ({
             sx={{ mt: 2 }}
           />
           <TextField
-            label="Phone"
+            label="Teléfono"
             type="text"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
@@ -75,7 +98,7 @@ register ({
             sx={{ mt: 2 }}
           />
           <TextField
-            label="Password"
+            label="Contraseña"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -84,7 +107,7 @@ register ({
             sx={{ mt: 2 }}
           />
           <TextField
-            label="Confirm Password"
+            label="Confirmar contraseña"
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
@@ -96,7 +119,15 @@ register ({
             type="submit"
             variant="contained"
             fullWidth
-            sx={{ mt: 4 }}
+            sx={{
+              mt: 4,
+              backgroundColor: '#6BB29C',
+              color: 'white',
+              '&:hover': {
+                backgroundColor: '#BCCC5E',
+                color: 'white',
+              },
+            }}
           >
             Registro
           </Button>
@@ -105,11 +136,20 @@ register ({
           ¿Ya tienes una cuenta? <Link to="/login">Accede</Link>
         </Typography>
       </Box>
+      <Modal open={openModal} onClose={handleCloseModal}>
+        <Box sx={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", bgcolor: "background.paper", boxShadow: 24, p: 4 }}>
+          <Typography variant="h6">Registro exitoso</Typography>
+          <Typography variant="body1">¡El registro se ha completado con éxito!</Typography>
+          <Button onClick={handleCloseModal}>Cerrar</Button>
+        </Box>
+      </Modal>
     </Container>
   );
 };
 
 export default Register;
+
+
 
 
 

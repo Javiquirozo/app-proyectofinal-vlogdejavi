@@ -1,55 +1,59 @@
 import { useContext } from "react";
-import { Grid, Card, CardContent, CardMedia, Typography, Button } from "@mui/material";
-import { CursosContext } from "../context/CursosContext";
+import { Grid, Card, CardContent, CardMedia, Typography, Button, Box } from "@mui/material";
+import { styled } from "@mui/system";
+import { UserContext } from "../context/UserContext";
 
-// Este componente es la lista de cursos de cocina en formato cards que debe verse en el Home de forma pública para cualquiera que entre a la app.
-const CursosDeCocina = ({curso}) => {
-  const { cursos, cursosdecocina, addToCart } = useContext(CursosContext);
+const StyledCard = styled(Card)(({ theme }) => ({
+  textAlign: 'center',
+  padding: theme.spacing(2),
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  height: '100%',
+}));
+
+const CursosDeCocina = ({ cursosDeCocina }) => {
+  const { addToCart } = useContext(UserContext);
 
   return (
-    <Grid container spacing={3}>
-      {cursosdecocina.map((curso) => (
-        <Grid item xs={12} sm={6} md={4} key={curso.id}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="200"
-              image={curso.image}
-              alt={curso.nameOfClass}
-            />
-            <CardContent>
-              <Typography variant="h5" component="h2">
+    <Grid container spacing={3} sx={{ margin: '20px auto' }}>
+      {
+        cursosDeCocina.map((curso) => (
+          <Grid item xs={12} sm={6} md={4} key={curso.id}>
+            <StyledCard>
+              <Typography variant="h6" component="h2" sx={{ mb: 2 }}>
                 {curso.nameOfClass}
               </Typography>
-              <Typography color="textSecondary">
-                Instructor: {curso.instructor}
-              </Typography>
-              <Typography variant="body2" component="p">
-                {curso.description}
-              </Typography>
-              <Typography color="textSecondary">
-                Schedule: {curso.schedule}
-              </Typography>
-              <Typography color="textSecondary">
-                Location: {curso.location}
-              </Typography>
-              <Typography variant="h6" component="h3">
-                Price: {curso.price}
-              </Typography>
-              <Button
-                variant="contained"
-                onClick={() => addToCart(curso)}
-                fullWidth
-              >
-                Añadir al carrito
-              </Button>
-            </CardContent>
-          </Card>
-        </Grid>
-      ))}
+              <CardMedia
+                component="img"
+                height="200"
+                image={curso.img}
+                alt={curso.nameOfClass}
+              />
+              <CardContent>
+                <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+                  {curso.description}
+                </Typography>
+              </CardContent>
+              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Button
+                  variant="contained"
+                  onClick={() => addToCart(curso)}
+                  sx={{ bgcolor: '#9A659B', color: 'white' }}
+                >
+                  Añadir al carrito
+                </Button>
+              </Box>
+            </StyledCard>
+          </Grid>
+        ))
+      }
     </Grid>
   );
 };
 
 export default CursosDeCocina;
+
+
+
 

@@ -1,38 +1,58 @@
-import { useContext, useEffect, useState } from "react";
-import { CursosContext } from "../context/CursosContext"; 
+import { useContext, useState } from "react";
+import { CursosContext } from "../context/CursosContext";
+import { Box, Typography, TextField, InputAdornment } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 import CursosDeCocina from "../components/CursosDeCocina";
+import HeaderHome from "../pages/HeaderHome";
 
 const Home = () => {
   const { cursos } = useContext(CursosContext);
-  const [searchText, setSearchText] = useState('');
-
+  const [searchText, setSearchText] = useState("");
 
   return (
     <>
-      <div>
-        <h2>Cursos de Cocina</h2>
-        <input 
-        type="text" 
-        placeholder="Buscar"
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
-        />
-        <div>
-        {cursos
-          .filter((curso) =>
-            curso.nameOfclass.toLowerCase().includes(searchText.toLowerCase())
-          )
-          .map((curso) => (
-            <CursosDeCocina
-              key={curso.id}
-              curso={curso}
-            />
-          ))}
+      <Box sx={{ paddingTop: "40px" }}>
+        <HeaderHome />
+      </Box>
+      <Box sx={{ paddingY: "60px" }}>
+        <Typography variant="h5" align="center" gutterBottom>
+          Cursos de Cocina
+        </Typography>
 
-        </div>
-      </div>
+        <Box sx={{ paddingY: "8px" }}>
+          <TextField
+            type="text"
+            placeholder="Buscar"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            fullWidth
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Box>
+      </Box>
+
+      <CursosDeCocina
+        cursosDeCocina={
+          searchText === ""
+            ? cursos
+            : cursos.filter((curso) =>
+                curso.nameOfClass
+                  ?.toLowerCase()
+                  .includes(searchText.toLowerCase())
+              )
+        }
+      />
     </>
   );
 };
 
 export default Home;
+
+
+

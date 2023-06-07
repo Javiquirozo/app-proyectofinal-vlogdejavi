@@ -2,14 +2,19 @@ import { createContext, useEffect, useState } from "react";
 
 export const CursosContext = createContext();
 
-const initialCursoState = localStorage.getItem('cursos') ?
-JSON.parse(localStorage.getItem('cursos')) : []
+const initialCursoState = localStorage.getItem('cursos') ? JSON.parse(localStorage.getItem('cursos')) : []
+
+console.log('initialCursoState');
+console.log(initialCursoState);
 
 const CursosProvider = ({ children }) => {
   const [cursos, setCursos] = useState(initialCursoState);
 
     const getCursos = async () => {
       const res = await fetch("./cursosdecocina.json");
+
+      console.log('res', res);
+
       const data = await res.json();
       setCursos(data);
     };
@@ -46,18 +51,17 @@ const CursosProvider = ({ children }) => {
     };
 
   return (
-    <CursosContext.Provider 
-    value={{
+    <CursosContext.Provider
+      value={{
         cursos,
         createCurso,
         deleteCurso,
         updateCurso
         }}
-        >
-      {children}
+      >
+        {children}
     </CursosContext.Provider>
   );
 };
 
 export default CursosProvider
-  

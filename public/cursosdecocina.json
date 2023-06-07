@@ -5,10 +5,9 @@
     "instructor": "Chef Ana",
     "description": "Descubre deliciosas recetas veganas",
     "schedule": "Lunes y miércoles de 18:00 a 20:00",
-    "location": "Cocina principal",
     "price": 35000,
     "email": "usuario1@example.com",
-    "img": "https://recetasdejavi.cl/wp-content/uploads/2021/07/B04E26C1-7B6F-4513-9F65-32EBDBDA3562_1_105_c.jpeg"
+    "img": ""
   },
   {
     "id": "2",
@@ -16,10 +15,9 @@
     "instructor": "Chef David",
     "description": "Aprende a preparar platos raw y nutritivos",
     "schedule": "Martes y jueves de 16:00 a 18:00",
-    "location": "Sala de postres",
     "price": 40000,
     "email": "usuario2@example.com",
-    "img": "https://recetasdejavi.cl/wp-content/uploads/2020/11/8AB15728-4E71-422B-8F11-6C93D20D7DAD_1_105_c.jpeg"
+    "img": "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2486&q=80"
   },
   {
     "id": "3",
@@ -27,10 +25,9 @@
     "instructor": "Chef Carolina",
     "description": "Disfruta de una alimentación saludable y balanceada",
     "schedule": "Miércoles y viernes de 19:00 a 21:00",
-    "location": "Área de sushi",
     "price": 38000,
     "email": "usuario3@example.com",
-    "img": "https://recetasdejavi.cl/wp-content/uploads/2020/11/UNADJUSTEDNONRAW_thumb_761e.jpg"
+    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
   },
   {
     "id": "4",
@@ -38,10 +35,9 @@
     "instructor": "Chef Gabriela",
     "description": "Explora la alta cocina vegana con ingredientes de calidad",
     "schedule": "Lunes y jueves de 18:00 a 20:00",
-    "location": "Cocina principal",
     "price": 42000,
     "email": "usuario4@example.com",
-    "img": "https://recetasdejavi.cl/wp-content/uploads/2019/02/bb3a2d2c-c177-49ab-9d74-9db56cc10ad3.jpg"
+    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
   },
   {
     "id": "5",
@@ -49,10 +45,9 @@
     "instructor": "Chef Raúl",
     "description": "Aprende a preparar deliciosos platos crudiveganos",
     "schedule": "Martes y viernes de 16:00 a 18:00",
-    "location": "Sala de postres",
     "price": 35000,
     "email": "usuario5@example.com",
-    "img": "https://recetasdejavi.cl/wp-content/uploads/2018/09/IMG_8689-1100x1100.jpg"
+    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
   },
   {
     "id": "6",
@@ -60,10 +55,9 @@
     "instructor": "Chef Martina",
     "description": "Descubre opciones saludables y libres de gluten",
     "schedule": "Miércoles y jueves de 19:00 a 21:00",
-    "location": "Área de sushi",
     "price": 38000,
     "email": "usuario6@example.com",
-    "img": "https://recetasdejavi.cl/wp-content/uploads/2020/04/a55ae080-03fd-43e8-abf7-62646eb74f0b.jpg"
+    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
   },
   {
     "id": "7",
@@ -71,10 +65,9 @@
     "instructor": "Chef Valentina",
     "description": "Enseñanza divertida y saludable para los más pequeños",
     "schedule": "Lunes y miércoles de 16:00 a 18:00",
-    "location": "Cocina principal",
     "price": 35000,
     "email": "usuario7@example.com",
-    "img": "https://recetasdejavi.cl/wp-content/uploads/2020/11/821A591A-3329-464F-BCE6-51371E04F9B8_1_105_c.jpeg"
+    "img": "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
   },
   {
     "id": "8",
@@ -82,10 +75,9 @@
     "instructor": "Chef Catalina",
     "description": "Aprende los fundamentos de la cocina raw",
     "schedule": "Martes y jueves de 18:00 a 20:00",
-    "location": "Sala de postres",
     "price": 30000,
     "email": "usuario8@example.com",
-    "img": "https://recetasdejavi.cl/wp-content/uploads/2019/06/IMG_3673-1100x1100.jpg"
+    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
   },
   {
     "id": "9",
@@ -93,10 +85,8 @@
     "instructor": "Chef Sofía",
     "description": "Descubre cómo mantener una dieta equilibrada y saludable",
     "schedule": "Miércoles y viernes de 19:00 a 21:00",
-    "location": "Área de sushi",
     "price": 42000,
     "email": "usuario9@example.com",
-    "img": "https://recetasdejavi.cl/wp-content/uploads/2020/10/UNADJUSTEDNONRAW_thumb_744c.jpg"
+    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
   }
 ]
-

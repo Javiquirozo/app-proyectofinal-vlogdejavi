@@ -14,7 +14,6 @@ const Dashboard = () => {
   const [price, setPrice] = useState("");
   const [instructor, setInstructor] = useState("");
   const [schedule, setSchedule] = useState("");
-  const [location, setLocation] = useState("");
   const [img, setImg] = useState("");
 
   const handleSubmit = (e) => {
@@ -25,7 +24,6 @@ const Dashboard = () => {
         price,
         instructor,
         schedule,
-        location,
         id: Date.now(),
         user: user.email
     }

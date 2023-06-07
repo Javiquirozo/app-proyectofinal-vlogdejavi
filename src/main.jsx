@@ -30,7 +30,7 @@ createRoot(document.getElementById('root')).render(
             <Footer />
           </FavoritesProvider>
         </CursosProvider>
-      </UserProvider> 
+      </UserProvider>
     </BrowserRouter>
   </React.StrictMode>,
 );

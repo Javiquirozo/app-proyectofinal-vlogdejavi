@@ -11,27 +11,27 @@ const initialStateUsers = localStorage.getItem('users')
 : []
 
 const UserProvider = ({ children }) => {
-
-  const [users, setUsers] = useState ([initialStateUsers])
+  const [users, setUsers] = useState(initialStateUsers)
   const [user, setUser] = useState(initialStateUser);
   const [carrito, setCarrito] = useState([]);
 
   const getUsers = async () => {
-    const res = await fetch("users.json");
+    const res = await fetch("/users.json");
+
     const users = await res.json();
-    setUsers(users)
+
+    setUsers(users);
   };
+
+  useEffect(() => {
+    if(users.length < 5) {
+      getUsers();
+    }
+  }, [users]);
 
   useEffect(() => {
       localStorage.setItem("users", JSON.stringify(users));
   }, [users]);
-
-
-  useEffect(() => {
-    if(users.length === 0) {
-      getUsers();
-    }
-  }, []);
 
   useEffect(() => {
     if (user) {
@@ -46,7 +46,8 @@ const UserProvider = ({ children }) => {
     const foundUser = users.find(
       (user) => user.email === email && user.password === password
     );
-    if (!foundUser) {
+
+    if (foundUser) {
       setUser(foundUser);
     } else {
       setUser(null);

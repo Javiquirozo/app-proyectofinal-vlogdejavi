@@ -25,13 +25,13 @@ const Login = () => {
 
     const user = users.find((user) => user.email === email);
 
-    if (user && user.password === password) {
-      // Iniciar sesión
+    if (user) {
       try {
         await login(user.email, user.password);
-        navigate('/dashboard');
+        navigate("/dashboard");
       } catch (error) {
-      } 
+        // Manejar el error de inicio de sesión aquí
+      }
     } else {
       // La contraseña no coincide o el usuario no existe
       console.log('Usuario o contraseña incorrectos');
@@ -50,43 +50,74 @@ const Login = () => {
 
   return (
     <div>
-      <Typography variant="h4" align="center" sx={{ mb: 2 }}>
-        ¡Bienvenid@! Inicia sesión
-      </Typography>
-      <Typography variant="body1" align="center" sx={{ mb: 2 }}>
-        En este blog encontrarás muchas recetas y material exclusivo para lograr llevar una alimentación más saludable.
-      </Typography>
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-        <Button
-          variant="contained"
-          onClick={handleOpen}
+      <Box
+        sx={{
+          position: 'relative',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          minHeight: '70vh', 
+          overflow: 'hidden', 
+        }}
+      >
+        <img
+          src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2487&q=80"
+          alt="Imagen"
+          style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            paddingTop: '10px', 
+            paddingBottom: '10px', 
+          }}
+        />
+        <Box
           sx={{
-            backgroundColor: '#9A659B',
+            position: 'relative',
+            zIndex: 1, // Asegurar que el contenido aparezca por encima de la imagen
+            textAlign: 'center',
             color: 'white',
-            mr: 2,
-            '&:hover': {
-              backgroundColor: '#BCCC5E',
-              color: 'white',
-            },
+            p: 4,
           }}
         >
-          Iniciar sesión
-        </Button>
-        <Button
-          variant="contained"
-          component={Link}
-          to="/register"
-          sx={{
-            backgroundColor: '#9A659B',
-            color: 'white',
-            '&:hover': {
-              backgroundColor: '#BCCC5E',
+          <Typography variant="h3" sx={{ mb: 2 }}>
+            ¡Bienvenid@! Inicia sesión
+          </Typography>
+          <Typography variant="h5" sx={{ mb: 2 }}>
+            En este blog encontrarás muchas recetas, cursos y material exclusivo para lograr llevar una alimentación más saludable.
+            </Typography>
+          <Button
+            variant="contained"
+            onClick={handleOpen}
+            sx={{
+              backgroundColor: '#9A659B',
               color: 'white',
-            },
-          }}
-        >
-          Registrarse
-        </Button>
+              mr: 2,
+              '&:hover': {
+                backgroundColor: '#BCCC5E',
+                color: 'white',
+              },
+            }}
+          >
+            Iniciar sesión
+          </Button>
+          <Button
+            variant="contained"
+            component={Link}
+            to="/register"
+            sx={{
+              backgroundColor: '#9A659B',
+              color: 'white',
+              '&:hover': {
+                backgroundColor: '#BCCC5E',
+                color: 'white',
+              },
+            }}
+          >
+            Registrarse
+          </Button>
+        </Box>
       </Box>
       <Modal open={open} onClose={handleClose}>
         <Box
@@ -95,31 +126,33 @@ const Login = () => {
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            bgcolor: '#9A659B',
+            bgcolor: '#6BB29C',
             color: 'white',
             boxShadow: 24,
             p: 4,
+            width: 400, // Ancho del modal
           }}
         >
+          <Typography variant="h6" align="center" sx={{ mb: 2 }}>
+            ¡Bienvenid@! Inicia sesión con tu correo electrónico
+          </Typography>
           <form onSubmit={handleSubmit}>
-            <TextField
-              label="Email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              sx={{ mb: 2 }}
-            />
-            <br />
-            <TextField
-              label="Contraseña"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              sx={{ mb: 2 }}
-            />
-            <br />
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <TextField
+                label="Email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <TextField
+                label="Contraseña"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </Box>
             <Button
               variant="contained"
               type="submit"
@@ -130,10 +163,14 @@ const Login = () => {
                   backgroundColor: '#BCCC5E',
                   color: 'white',
                 },
+                mt: 2, // Margen superior
               }}
             >
               Iniciar sesión
             </Button>
+            <Typography variant="body2" align="center" sx={{ mt: 2 }}>
+              ¿No tienes cuenta? <Link to="/register">Regístrate aquí</Link>
+            </Typography>
           </form>
         </Box>
       </Modal>
@@ -142,3 +179,4 @@ const Login = () => {
 };
 
 export default Login;
+

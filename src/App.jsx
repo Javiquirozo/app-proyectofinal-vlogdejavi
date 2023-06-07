@@ -18,17 +18,17 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route 
-          path="" 
+        <Route
+          path=""
           element={<Home />}
         />
-        <Route 
-          path="/home" 
+        <Route
+          path="/home"
           element={<Home />}
         />
-        <Route 
-          path="/cursosdecocina" 
-          element={<CursosDeCocina />} 
+        <Route
+          path="/cursosdecocina"
+          element={<CursosDeCocina />}
         />
         <Route
           path="/register"
@@ -50,9 +50,9 @@ const App = () => {
           path="/favorites"
           element={user ? <Favorites /> : <Navigate to="/login" />}
         />
-        <Route 
-          path="/carrito" 
-          element={<Cart />} 
+        <Route
+          path="/carrito"
+          element={<Cart />}
         />
       </Routes>
     </>

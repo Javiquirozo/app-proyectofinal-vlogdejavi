@@ -1,4 +1,5 @@
 import { Box, Typography, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const HeaderHome = () => {
   return (
@@ -23,12 +24,19 @@ const HeaderHome = () => {
       <Typography variant="h6" sx={{ color: 'white', mb: 4 }}>
         En este blog encontrarás muchas recetas, cursos y material exclusivo para lograr llevar una alimentación más saludable.
       </Typography>
-      <Button variant="contained" color="primary" sx={{ bgcolor: '#9A659B' }}>
-        Ver cursos de cocina
+      <Button
+        variant="contained"
+        color="primary"
+        component={Link}
+        to="/login"
+        sx={{ bgcolor: '#9A659B' }}
+      >
+        Iniciar sesión
       </Button>
     </Box>
   );
 };
 
 export default HeaderHome;
+
 

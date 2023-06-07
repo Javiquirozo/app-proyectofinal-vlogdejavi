@@ -35,13 +35,13 @@ const CursosDeCocina = ({ cursosDeCocina }) => {
                   {curso.description}
                 </Typography>
                 <Typography color="textSecondary" variant="body2" sx={{ mb: 1 }}>
-                  Horario: {curso.schedule}
+                  {curso.schedule}
                 </Typography>
                 <Typography color="textSecondary" variant="body2" sx={{ mb: 1 }}>
-                  Instructor: {curso.instructor}
+                  {curso.instructor}
                 </Typography>
                 <Typography color="textSecondary" variant="body2" sx={{ mb: 1 }}>
-                  Precio: {curso.price}
+                  {curso.price}
                 </Typography>
               </CardContent>
               <Box sx={{ display: 'flex', justifyContent: 'center' }}>

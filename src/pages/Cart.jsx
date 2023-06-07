@@ -4,7 +4,7 @@ import { Typography, Card, CardContent, CardActions, Button, Divider, Box } from
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const Cart = () => {
-  const { carrito, addToCart, increment, decrement } = useContext(UserContext);
+  const { carrito, increment, decrement } = useContext(UserContext);
   const total = carrito.reduce((a, { count, price }) => a + price * count, 0);
 
   if (carrito.length === 0) {

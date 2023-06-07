@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { UserContext } from '../context/UserContext';
 import { useNavigate, Link } from 'react-router-dom';
-import { TextField, Button, Modal, Box, Typography } from '@mui/material';
+import { Alert, TextField, Button, Modal, Box, Typography } from '@mui/material';
 
 const Login = () => {
   const { login } = useContext(UserContext);
@@ -11,6 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [open, setOpen] = useState(false);
   const [users, setUsers] = useState([]);
+  const [showError, setShowError] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -28,6 +29,7 @@ const Login = () => {
     if (user) {
       try {
         await login(user.email, user.password);
+        setShowError(false);
         navigate("/dashboard");
       } catch (error) {
         // Manejar el error de inicio de sesión aquí
@@ -35,6 +37,7 @@ const Login = () => {
     } else {
       // La contraseña no coincide o el usuario no existe
       console.log('Usuario o contraseña incorrectos');
+      setShowError(true);
     }
 
     handleClose();
@@ -50,6 +53,11 @@ const Login = () => {
 
   return (
     <div>
+      {showError && (
+        <Alert variant="filled" severity="error">
+          Usuario o contraseña incorrectos
+        </Alert>
+      )}
       <Box
         sx={{
           position: 'relative',

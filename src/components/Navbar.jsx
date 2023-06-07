@@ -9,7 +9,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const Navbar = () => {
   const { carrito, user, logout } = useContext(UserContext);
 
-  const total = carrito.reduce((valorAnterior, { count, price }) => (valorAnterior + price) * count, 0);
+  const total = carrito.reduce((valorAnterior, { count, price }) => (Number(valorAnterior) + Number(price)) * count, 0);
 
   const handleLogout = () => {
     logout();
@@ -19,7 +19,7 @@ const Navbar = () => {
     <AppBar position="static" sx={{ backgroundColor: '#6BB29C' }}>
       <Toolbar>
         {/* imagen del logo */}
-        <img src="" alt="Logo" style={{ marginRight: '10px', width: '30px', height: '30px' }} />
+        <img src="/imgs/logo-recetasdejavi.png" alt="Logo" style={{ marginLeft: '25px', marginRight: '10px', width: 'auto', height: '40px' }} />
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           <NavLink to="/" style={{ color: 'white', textDecoration: 'none' }}>
             VlogDeJavi

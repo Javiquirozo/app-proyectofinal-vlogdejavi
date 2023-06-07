@@ -31,8 +31,17 @@ const CursosDeCocina = ({ cursosDeCocina }) => {
                 alt={curso.nameOfClass}
               />
               <CardContent>
-                <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+                <Typography variant="body1" component="p" sx={{ mb: 1 }}>
                   {curso.description}
+                </Typography>
+                <Typography color="textSecondary" variant="body2" sx={{ mb: 1 }}>
+                  Horario: {curso.schedule}
+                </Typography>
+                <Typography color="textSecondary" variant="body2" sx={{ mb: 1 }}>
+                  Instructor: {curso.instructor}
+                </Typography>
+                <Typography color="textSecondary" variant="body2" sx={{ mb: 1 }}>
+                  Precio: {curso.price}
                 </Typography>
               </CardContent>
               <Box sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -53,6 +62,7 @@ const CursosDeCocina = ({ cursosDeCocina }) => {
 };
 
 export default CursosDeCocina;
+
 
 
 

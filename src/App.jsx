@@ -6,7 +6,7 @@ import CursosDeCocina from "./components/CursosDeCocina";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-// import Update from "./pages/Update";
+import Update from "./pages/Update";
 import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import Cart from "./pages/Cart";
@@ -49,6 +49,10 @@ const App = () => {
         <Route
           path="/favorites"
           element={user ? <Favorites /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/update/:id"
+          element={user ? <Update /> : <Navigate to="/login" />}
         />
         <Route
           path="/carrito"

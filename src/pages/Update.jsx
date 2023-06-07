@@ -1,15 +1,13 @@
-import { useState, useContext } from "react";
-import { UserContext } from "../context/UserContext";
-import { useNavigate, Link } from 'react-router-dom';
-import { TextField, Button, Container, Grid, Typography } from "@mui/material";
+import { useContext, useEffect, useState } from "react";
 import { CursosContext } from "../context/CursosContext";
+import { useParams } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
+import { TextField, Button, Grid } from "@mui/material";
 
-// En el dashboard el usuario registrado puede agregar cursos de cocina
-
-const Dashboard = () => {
+const Update = () => {
+  const { id } = useParams();
+  const { cursos, updateCurso } = useContext(CursosContext);
   const { user } = useContext(UserContext);
-  const {createCurso, cursos, deleteCurso} = useContext(CursosContext);
-  const navigate = useNavigate();
 
   const [nameOfClass, setNameOfClass] = useState("");
   const [description, setDescription] = useState("");
@@ -18,25 +16,37 @@ const Dashboard = () => {
   const [schedule, setSchedule] = useState("");
   const [img, setImg] = useState("");
 
+  useEffect(() => {
+    const findCurso = cursos.find((item) => item.id === id);
+
+    setNameOfClass(findCurso.nameOfClass);
+    setDescription(findCurso.description);
+    setPrice(findCurso.price);
+    setInstructor(findCurso.instructor);
+    setSchedule(findCurso.schedule);
+    setImg(findCurso.img);
+  }, [id]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newCurso = {
-        nameOfClass,
-        description,
-        price,
-        instructor,
-        schedule,
-        id: Date.now(),
-        user: user.email
-    }
-    createCurso(newCurso)
+    const newProduct = {
+      nameOfClass,
+      description,
+      price,
+      instructor,
+      schedule,
+      img,
+      id: id,
+      user: user.email,
+    };
+    updateCurso(newProduct);
+    console.log("editado");
   };
 
   return (
-    <Container maxWidth="md">
-      <Typography variant="h1" align="center" gutterBottom>
-        ¡Hola {user.name}!
-      </Typography>
+    <div>
+      <h1>Actualizar producto</h1>
+
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
@@ -97,29 +107,12 @@ const Dashboard = () => {
           </Grid>
           <Grid item xs={12}>
             <Button variant="contained" type="submit" fullWidth>
-              Agregar curso
+              Actualizar
             </Button>
           </Grid>
         </Grid>
       </form>
-
-      <div>
-        {cursos
-        .filter((curso) => curso.user === user.email)
-        .map((curso) => (
-          <section key={curso.id}>
-              <h3>{curso.nameOfClass}</h3>
-              <button onClick={() => deleteCurso(curso.id)}>
-                  Eliminar
-                </button>
-              <button onClick={() => navigate('/update/' + curso.id)} >
-                  Editar
-              </button>
-          </section>
-        ))}
-      </div>
-    </Container>
+    </div>
   );
 };
-
-export default Dashboard;
+export default Update;

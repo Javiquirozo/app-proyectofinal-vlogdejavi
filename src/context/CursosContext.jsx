@@ -40,6 +40,9 @@ const CursosProvider = ({ children }) => {
     };
 
     const updateCurso = (newCurso) => {
+      console.log('ke pasa');
+      console.log('newCurso', newCurso);
+
       const newCursos = cursos.map((curso) => {
         if (curso.id === newCurso.id) {
           return newCurso;

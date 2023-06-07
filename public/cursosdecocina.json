@@ -1,92 +1,92 @@
 [
   {
     "id": "1",
-    "nameOfClass": "Clase de cocina vegana",
-    "instructor": "Chef Ana",
-    "description": "Descubre deliciosas recetas veganas",
+    "nameOfClass": "Pasta fresca",
+    "instructor": "Chef Lorena",
+    "description": "Aprende a preparar spaguettis, ravioles y lasaña",
     "schedule": "Lunes y miércoles de 18:00 a 20:00",
-    "price": 35000,
+    "price": 35.000,
     "email": "usuario1@example.com",
-    "img": ""
+    "img": "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
   },
   {
     "id": "2",
-    "nameOfClass": "Clase de repostería raw",
+    "nameOfClass": "Repostería raw",
     "instructor": "Chef David",
     "description": "Aprende a preparar platos raw y nutritivos",
     "schedule": "Martes y jueves de 16:00 a 18:00",
-    "price": 40000,
+    "price": 40.000,
     "email": "usuario2@example.com",
     "img": "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2486&q=80"
   },
   {
     "id": "3",
-    "nameOfClass": "Clase de cocina saludable",
+    "nameOfClass": "Ramen adict",
     "instructor": "Chef Carolina",
-    "description": "Disfruta de una alimentación saludable y balanceada",
+    "description": "Tendencia y estilo en un plato",
     "schedule": "Miércoles y viernes de 19:00 a 21:00",
-    "price": 38000,
+    "price": 38.000,
     "email": "usuario3@example.com",
-    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
+    "img": "https://images.unsplash.com/photo-1601974915460-f55ea921f8ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1089&q=80"
   },
   {
     "id": "4",
-    "nameOfClass": "Tortas para principiantes",
+    "nameOfClass": "Desayunos plant based",
     "instructor": "Chef Gabriela",
-    "description": "Explora la alta cocina vegana con ingredientes de calidad",
+    "description": "Explora muchas opciones para tus mañanas",
     "schedule": "Lunes y jueves de 18:00 a 20:00",
-    "price": 42000,
+    "price": 42.000,
     "email": "usuario4@example.com",
-    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
+    "img": "https://images.unsplash.com/photo-1540914124281-342587941389?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
   },
   {
     "id": "5",
-    "nameOfClass": "Repostería crudivegana",
+    "nameOfClass": "Pizzas con masa madre",
     "instructor": "Chef Raúl",
-    "description": "Aprende a preparar deliciosos platos crudiveganos",
+    "description": "Aprende a preparar deliciosas pizzas desde cero",
     "schedule": "Martes y viernes de 16:00 a 18:00",
-    "price": 35000,
+    "price": 35.000,
     "email": "usuario5@example.com",
-    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
+    "img": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80"
   },
   {
     "id": "6",
     "nameOfClass": "Clase de cocina saludable y sin gluten",
     "instructor": "Chef Martina",
-    "description": "Descubre opciones saludables y libres de gluten",
+    "description": "Descubre opciones ricas, novedosas y libres de gluten",
     "schedule": "Miércoles y jueves de 19:00 a 21:00",
-    "price": 38000,
+    "price": 38.000,
     "email": "usuario6@example.com",
     "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
   },
   {
     "id": "7",
-    "nameOfClass": "Clase de cocina vegana para niños",
+    "nameOfClass": "Hamburguesas del futuro",
     "instructor": "Chef Valentina",
-    "description": "Enseñanza divertida y saludable para los más pequeños",
+    "description": "Conoce la nueva forma de comer hamburguesas",
     "schedule": "Lunes y miércoles de 16:00 a 18:00",
-    "price": 35000,
+    "price": 35.000,
     "email": "usuario7@example.com",
-    "img": "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+    "img": "https://images.unsplash.com/photo-1585238341267-1cfec2046a55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=874&q=80"
   },
   {
     "id": "8",
-    "nameOfClass": "Planifica tu semana",
+    "nameOfClass": "Tortas para principiantes",
     "instructor": "Chef Catalina",
-    "description": "Aprende los fundamentos de la cocina raw",
+    "description": "¡Es más simple de lo que parece!",
     "schedule": "Martes y jueves de 18:00 a 20:00",
-    "price": 30000,
+    "price": 30.000,
     "email": "usuario8@example.com",
-    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
+    "img": "https://images.unsplash.com/photo-1559620192-032c4bc4674e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=729&q=80"
   },
   {
     "id": "9",
     "nameOfClass": "Clase de cocina saludable y balanceada",
     "instructor": "Chef Sofía",
-    "description": "Descubre cómo mantener una dieta equilibrada y saludable",
+    "description": "Dulces horneados",
     "schedule": "Miércoles y viernes de 19:00 a 21:00",
-    "price": 42000,
+    "price": 42.000,
     "email": "usuario9@example.com",
-    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
+    "img": "https://images.unsplash.com/photo-1536302981626-f77f29b17948?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
   }
 ]

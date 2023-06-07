@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 
 const Cart = () => {
-  const { user, carrito, addToCart, increment, decrement } = useContext(UserContext);
+  const { carrito, addToCart, increment, decrement } = useContext(UserContext);
   const total = carrito.reduce((a, { count, price }) => a + price * count, 0);
 
   if (carrito.length === 0) {
@@ -14,20 +14,20 @@ const Cart = () => {
       <div>hola soy el carrito</div>
       <h3>Detalle del pedido</h3>
       <div>
-        {carrito.map((producto, i) => (
+        {carrito.map((curso, i) => (
           <div className="imgClaseDeCocina" key={i}>
-            <img src={producto.img} alt="Imagen del producto" />
-            <h6>{producto.name}</h6>
+            <img src={curso.img} alt="Imagen del producto" />
+            <h6>{curso.nameOfClass}</h6>
             <div>
-              <h6>{producto.price * producto.count}</h6>
+              <h6>{curso.price * curso.count}</h6>
               <button onClick={() => decrement(i)}>
-                Decrementar
+                Eliminar
               </button>
-              <b>{producto.count}</b>
+              <b>{curso.count}</b>
               <button
                 onClick={() => increment(i)}
               >
-                Incrementar
+                Agregar
               </button>
             </div>
           </div>

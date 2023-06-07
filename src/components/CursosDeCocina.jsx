@@ -4,7 +4,7 @@ import { CursosContext } from "../context/CursosContext";
 
 // Este componente es la lista de cursos de cocina en formato cards que debe verse en el Home de forma pública para cualquiera que entre a la app.
 const CursosDeCocina = ({curso}) => {
-  const { cursosdecocina, addToCart } = useContext(CursosContext);
+  const { cursos, cursosdecocina, addToCart } = useContext(CursosContext);
 
   return (
     <Grid container spacing={3}>

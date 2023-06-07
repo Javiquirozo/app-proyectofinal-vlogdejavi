@@ -1,10 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CursosContext } from "../context/CursosContext"; 
 import CursosDeCocina from "../components/CursosDeCocina";
 
 const Home = () => {
   const { cursos } = useContext(CursosContext);
-  const [searchText, setSearchText] = useState('')
+  const [searchText, setSearchText] = useState('');
+
 
   return (
     <>
@@ -19,7 +20,7 @@ const Home = () => {
         <div>
         {cursos
           .filter((curso) =>
-            curso.title.toLowerCase().includes(searchText.toLowerCase())
+            curso.nameOfclass.toLowerCase().includes(searchText.toLowerCase())
           )
           .map((curso) => (
             <CursosDeCocina

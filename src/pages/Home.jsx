@@ -3,7 +3,8 @@ import { CursosContext } from "../context/CursosContext";
 import { Box, Typography, TextField, InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import CursosDeCocina from "../components/CursosDeCocina";
-import HeaderHome from "../pages/HeaderHome";
+import HeaderHome from "../components/HeaderHome";
+import FooterImg from "../components/FooterImg";
 
 const Home = () => {
   const { cursos } = useContext(CursosContext);
@@ -48,11 +49,14 @@ const Home = () => {
               )
         }
       />
+
+      <FooterImg />
     </>
   );
 };
 
 export default Home;
+
 
 
 

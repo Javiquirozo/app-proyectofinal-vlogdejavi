@@ -1,23 +1,30 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Link } from '@mui/material';
 
 const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: '#6BB29C',
+        backgroundColor: '#9A659B',
+        textAlign: 'center',
         padding: '20px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
       }}
     >
-      <img src="ruta_de_la_imagen.jpg" alt="footer" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
       <Typography variant="body1" sx={{ color: 'white', fontSize: '1rem', fontWeight: 'bold' }}>
-        VlogDeJavi
+        <Link
+          href="https://www.example.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{ color: 'inherit', textDecoration: 'none', '&:hover': { color: '#BCCC5E' } }}
+        >
+          @vlogdejavi
+        </Link>
       </Typography>
     </Box>
   );
 };
 
 export default Footer;
+
+
+
 

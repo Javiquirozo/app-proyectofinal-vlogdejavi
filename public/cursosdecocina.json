@@ -5,19 +5,19 @@
     "instructor": "Chef Lorena",
     "description": "Aprende a preparar spaguettis, ravioles y lasaña",
     "schedule": "Lunes y miércoles de 18:00 a 20:00",
-    "price": 35.000,
+    "price": 35000,
     "email": "usuario1@example.com",
     "img": "https://images.unsplash.com/photo-1498579150354-977475b7ea0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
   },
   {
     "id": "2",
-    "nameOfClass": "Repostería raw",
+    "nameOfClass": "Dulces raw",
     "instructor": "Chef David",
-    "description": "Aprende a preparar platos raw y nutritivos",
+    "description": "Aprende a preparar dulces raw y nutritivos",
     "schedule": "Martes y jueves de 16:00 a 18:00",
-    "price": 40.000,
+    "price": 40000,
     "email": "usuario2@example.com",
-    "img": "https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2486&q=80"
+    "img": "https://images.unsplash.com/photo-1450152021501-598b36b17449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
   },
   {
     "id": "3",
@@ -25,7 +25,7 @@
     "instructor": "Chef Carolina",
     "description": "Tendencia y estilo en un plato",
     "schedule": "Miércoles y viernes de 19:00 a 21:00",
-    "price": 38.000,
+    "price": 38000,
     "email": "usuario3@example.com",
     "img": "https://images.unsplash.com/photo-1601974915460-f55ea921f8ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1089&q=80"
   },
@@ -35,7 +35,7 @@
     "instructor": "Chef Gabriela",
     "description": "Explora muchas opciones para tus mañanas",
     "schedule": "Lunes y jueves de 18:00 a 20:00",
-    "price": 42.000,
+    "price": 42000,
     "email": "usuario4@example.com",
     "img": "https://images.unsplash.com/photo-1540914124281-342587941389?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
   },
@@ -45,19 +45,19 @@
     "instructor": "Chef Raúl",
     "description": "Aprende a preparar deliciosas pizzas desde cero",
     "schedule": "Martes y viernes de 16:00 a 18:00",
-    "price": 35.000,
+    "price": 35000,
     "email": "usuario5@example.com",
     "img": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80"
   },
   {
     "id": "6",
-    "nameOfClass": "Clase de cocina saludable y sin gluten",
+    "nameOfClass": "Cocina oriental",
     "instructor": "Chef Martina",
-    "description": "Descubre opciones ricas, novedosas y libres de gluten",
+    "description": "Descubre sabores novedosos y recetas clásicas de la cocina oriental",
     "schedule": "Miércoles y jueves de 19:00 a 21:00",
-    "price": 38.000,
+    "price": 38000,
     "email": "usuario6@example.com",
-    "img": "https://plus.unsplash.com/premium_photo-1663852297801-d277b7af6594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80"
+    "img": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
   },
   {
     "id": "7",
@@ -65,7 +65,7 @@
     "instructor": "Chef Valentina",
     "description": "Conoce la nueva forma de comer hamburguesas",
     "schedule": "Lunes y miércoles de 16:00 a 18:00",
-    "price": 35.000,
+    "price": 35000,
     "email": "usuario7@example.com",
     "img": "https://images.unsplash.com/photo-1585238341267-1cfec2046a55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=874&q=80"
   },
@@ -75,17 +75,17 @@
     "instructor": "Chef Catalina",
     "description": "¡Es más simple de lo que parece!",
     "schedule": "Martes y jueves de 18:00 a 20:00",
-    "price": 30.000,
+    "price": 30000,
     "email": "usuario8@example.com",
     "img": "https://images.unsplash.com/photo-1559620192-032c4bc4674e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=729&q=80"
   },
   {
     "id": "9",
-    "nameOfClass": "Clase de cocina saludable y balanceada",
+    "nameOfClass": "Dulces horneados",
     "instructor": "Chef Sofía",
-    "description": "Dulces horneados",
+    "description": "Aromas que conquistan en la cocina",
     "schedule": "Miércoles y viernes de 19:00 a 21:00",
-    "price": 42.000,
+    "price": 42000,
     "email": "usuario9@example.com",
     "img": "https://images.unsplash.com/photo-1536302981626-f77f29b17948?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
   }

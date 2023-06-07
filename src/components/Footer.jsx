@@ -4,14 +4,14 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: '#9A659B',
+        backgroundColor: '#6BB29C',
         textAlign: 'center',
         padding: '20px',
       }}
     >
       <Typography variant="body1" sx={{ color: 'white', fontSize: '1rem', fontWeight: 'bold' }}>
         <Link
-          href="https://www.example.com"
+          href="https://www.instagram.com/vlogdejavi"
           target="_blank"
           rel="noopener noreferrer"
           sx={{ color: 'inherit', textDecoration: 'none', '&:hover': { color: '#BCCC5E' } }}
@@ -24,6 +24,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
 
 

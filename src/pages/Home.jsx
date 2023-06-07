@@ -5,6 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import CursosDeCocina from "../components/CursosDeCocina";
 import HeaderHome from "../components/HeaderHome";
 import FooterImg from "../components/FooterImg";
+import InstagramReel from "../components/InstagramReel"
 
 const Home = () => {
   const { cursos } = useContext(CursosContext);
@@ -51,6 +52,9 @@ const Home = () => {
       />
 
       <FooterImg />
+      <div>
+        <InstagramReel />
+      </div>
     </>
   );
 };
